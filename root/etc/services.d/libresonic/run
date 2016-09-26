@@ -8,11 +8,12 @@ URL_BASE="/${CONTEXT_PATH}"
 
 
 cd "${LIBRE_HOME}"
-s6-setuidgid abc \
-java -Dlibresonic.home="${LIBRE_SETTINGS}" \
--Dlibresonic.defaultMusicFolder=/music \
--Dlibresonic.defaultPodcastFolder=/podcasts \
--Dlibresonic.defaultPlaylistFolder=/playlists \
--jar /usr/share/java/jetty-runner.jar \
---host 0.0.0.0 --port 4040 --path "${URL_BASE}" \
-libresonic.war
+exec \
+	s6-setuidgid abc \
+	java -Dlibresonic.home="${LIBRE_SETTINGS}" \
+	-Dlibresonic.defaultMusicFolder=/music \
+	-Dlibresonic.defaultPodcastFolder=/podcasts \
+	-Dlibresonic.defaultPlaylistFolder=/playlists \
+	-jar /usr/share/java/jetty-runner.jar \
+	--host 0.0.0.0 --port 4040 --path "${URL_BASE}" \
+	libresonic.war

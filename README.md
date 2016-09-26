@@ -17,20 +17,21 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 
 [Libresonic][libreurl] is a free, web-based media streamer, providing ubiqutious access to your music. Use it to share your music with friends, or to listen to your own music while at work. You can stream to multiple players simultaneously, for instance to one player in your kitchen and another in your living room.
 
-[![libresonic]()][libreurl]
+[![libresonic](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/Libresonic.png)][libreurl]
 [libreurl]: https://github.com/Libresonic/libresonic
 
 ## Usage
 
 ```
 docker create \
-    --name="libresonic" \
-    -v /path/to/libresonic/data:/config \
-    -v /path/to/music:/music \
-    -e PGID=<gid> -e PUID=<uid> \
-    -e TZ=<timezone> \
-    -p 4040:4040 \
-    lsioarmhf/libresonic
+--name="libresonic" \
+-v </path/to/config>:/config \
+-v </path/to/music>:/music \
+-e PGID=<gid> -e PUID=<uid> \
+-e CONTEXT_PATH=<url-base> \
+-e TZ=<timezone> \
+-p 4040:4040 \
+lsioarmhf/libresonic
 ```
 
 **Parameters**
@@ -40,6 +41,7 @@ docker create \
 * `-v /music` - Location of music.
 * `-e PGID` for for GroupID - see below for explanation - *optional*
 * `-e PUID` for for UserID - see below for explanation - *optional*
+* `-e CONTEXT_PATH` for setting url-base in reverse proxy setups - *optional
 * `-e TZ` for setting timezone information, eg Europe/London
 
 It is based on alpine linux with s6 overlay, for shell access whilst the container is running do `docker exec -it libresonic /bin/bash`.
@@ -58,7 +60,9 @@ In this instance `PUID=1001` and `PGID=1001`. To find yours use `id user` as bel
 ## Setting up the application
 `IMPORTANT... THIS IS THE ARMHF VERSION`
 
-Access WebUI at http://localhost:8181 and walk through the wizard.
+Access WebUI at `<your-ip>:4040`.
+
+Default user/pass is admin/admin
 
 ## Info
 
