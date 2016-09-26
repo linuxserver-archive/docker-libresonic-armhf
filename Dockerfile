@@ -33,7 +33,8 @@ RUN \
  cd /tmp/jetty && \
  install -m644 -D /tmp/jetty/jetty.jar \
 	/usr/share/java/jetty-runner.jar || return 1 && \
- install -m755 -D jetty-runner /usr/bin/jetty-runner && \
+ install -m755 -D jetty-runner \
+	/usr/bin/jetty-runner && \
 
 # install libresonic
   mkdir -p \
@@ -55,4 +56,3 @@ COPY root/ /
 # ports and volumes
 EXPOSE 4040
 VOLUME /config /media /music /playlists /podcasts
-
