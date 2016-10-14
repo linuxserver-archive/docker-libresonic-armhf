@@ -11,7 +11,7 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 * [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
 # lsioarmhf/libresonic
-[![](https://images.microbadger.com/badges/image/lsioarmhf/libresonic.svg)](https://microbadger.com/images/lsioarmhf/libresonic "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/lsioarmhf/libresonic.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsioarmhf/libresonic.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io-armhf/lsioarmhf-libresonic)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io-armhf/job/lsioarmhf-libresonic/)
+[![](https://images.microbadger.com/badges/version/lsioarmhf/libresonic.svg)](https://microbadger.com/images/lsioarmhf/libresonic "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/lsioarmhf/libresonic.svg)](https://microbadger.com/images/lsioarmhf/libresonic "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/lsioarmhf/libresonic.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsioarmhf/libresonic.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io-armhf/lsioarmhf-libresonic)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io-armhf/job/lsioarmhf-libresonic/)
 [hub]: https://hub.docker.com/r/lsioarmhf/libresonic/
 
 
@@ -68,7 +68,15 @@ Default user/pass is admin/admin
 
 * To monitor the logs of the container in realtime `docker logs -f libresonic`.
 
-## Version History
+* container version number 
 
+`docker inspect -f '{{ index .Config.Labels "build_version" }}' libresonic`
+
+* image version number
+
+`docker inspect -f '{{ index .Config.Labels "build_version" }}' lsioarmhf/libresonic`
+
+## Versions
+
++ **14-10-16:** Add version layer information.
 + **26.09.16:** Inital Release
-
