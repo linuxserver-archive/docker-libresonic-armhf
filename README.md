@@ -84,5 +84,5 @@ Default user/pass is admin/admin
 
 ## Versions
 
-+ **14-10-16:** Add version layer information.
++ **14.10.16:** Add version layer information.
 + **26.09.16:** Inital Release
