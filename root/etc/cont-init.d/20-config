@@ -2,7 +2,7 @@
 
 mkdir -p "${LIBRE_SETTINGS}"/transcode
 
-if [ ! -e "${LIBRE_SETTINGS}"/transcode/ffmpeg -o "${LIBRE_SETTINGS}"/transcode/flac -o "${LIBRE_SETTINGS}"/transcode/lame  ]; then
+if [[ ! -e "${LIBRE_SETTINGS}"/transcode/ffmpeg || ! -e  "${LIBRE_SETTINGS}"/transcode/flac || ! -e "${LIBRE_SETTINGS}"/transcode/lame  ]]; then
 ln -sf /usr/bin/ffmpeg "${LIBRE_SETTINGS}"/transcode/
 ln -sf /usr/bin/flac "${LIBRE_SETTINGS}"/transcode/
 ln -sf /usr/bin/lame "${LIBRE_SETTINGS}"/transcode/
