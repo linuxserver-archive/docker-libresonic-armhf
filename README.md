@@ -84,5 +84,6 @@ Default user/pass is admin/admin
 
 ## Versions
 
++ **17.11.16:** Use self-compiled war file.
 + **14.10.16:** Add version layer information.
 + **26.09.16:** Inital Release

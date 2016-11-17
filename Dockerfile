@@ -6,12 +6,12 @@ ARG BUILD_DATE
 ARG VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 
-# copy prebuild files
+# copy prebuild files and warfile
 COPY prebuilds/ /prebuilds/
+COPY package/ /app/libresonic/
 
 # package version settings
 ARG JETTY_VER="9.3.10.v20160621"
-ARG LIBRE_VER="v6.1.beta1"
 
 # environment settings
 ARG DEBIAN_FRONTEND="noninteractive"
@@ -40,13 +40,6 @@ RUN \
 	/usr/share/java/jetty-runner.jar || return 1 && \
  install -m755 -D jetty-runner \
 	/usr/bin/jetty-runner && \
-
-# install libresonic
-  mkdir -p \
-	"${LIBRE_HOME}" && \
- curl -o \
- "${LIBRE_HOME}"/libresonic.war -L \
-	"https://github.com/Libresonic/libresonic/releases/download/${LIBRE_VER}/libresonic-${LIBRE_VER}.war" && \
 
 # cleanup
  apt-get clean && \
