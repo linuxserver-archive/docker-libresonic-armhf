@@ -27,10 +27,13 @@ docker create \
 --name="libresonic" \
 -v </path/to/config>:/config \
 -v </path/to/music>:/music \
+-v </path/to/playlists>:/playlists \
+-v </path/to/podcasts>:/podcasts \
+-v </path/to/other media>:/media \
 -e PGID=<gid> -e PUID=<uid> \
 -e CONTEXT_PATH=<url-base> \
 -e TZ=<timezone> \
--p 4040:4040 \
+-p 4040:4040
 lsioarmhf/libresonic
 ```
 
@@ -45,12 +48,15 @@ http://192.168.x.x:8080 would show you what's running INSIDE the container on po
 * `-p 4040` - the port(s)
 * `-v /config` - Configuration file location
 * `-v /music` - Location of music.
+* `-v /playlists` - Location for playlists to be saved to.
+* `-v /podcasts` - Location of podcasts.
+* `-v /media` - Location of other media - *optional*
 * `-e PGID` for for GroupID - see below for explanation - *optional*
 * `-e PUID` for for UserID - see below for explanation - *optional*
 * `-e CONTEXT_PATH` for setting url-base in reverse proxy setups - *optional*
 * `-e TZ` for setting timezone information, eg Europe/London
 
-It is based on alpine linux with s6 overlay, for shell access whilst the container is running do `docker exec -it libresonic /bin/bash`.
+It is based on ubuntu xenial with s6 overlay, for shell access whilst the container is running do `docker exec -it libresonic /bin/bash`.
 
 ### User / Group Identifiers
 
