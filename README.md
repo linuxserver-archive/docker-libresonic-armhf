@@ -90,6 +90,7 @@ Default user/pass is admin/admin
 
 ## Versions
 
++ **04.12.16:** Update jetty runner version.
 + **29.11.16:** Switch to building from release tags following v6.1 stable release.
 + **17.11.16:** Use self-compiled war file.
 + **14.10.16:** Add version layer information.
