@@ -27,8 +27,10 @@ ENV LIBRE_SETTINGS="/config"
 RUN \
  apk add --no-cache --virtual=build-dependencies \
 	curl \
-	openjdk8 \
 	tar && \
+ apk add --no-cache --virtual=build-dependencies \
+	--repository http://nl.alpinelinux.org/alpine/edge/community \
+	openjdk8 && \
 
 # install jetty-runner
  mkdir -p \
@@ -54,8 +56,10 @@ RUN \
 	ffmpeg \
 	flac \
 	lame \
-	openjdk8-jre \
-	ttf-dejavu
+	ttf-dejavu && \
+ apk add --no-cache \
+	--repository http://nl.alpinelinux.org/alpine/edge/community \
+	openjdk8-jre
 
 # add local files
 COPY root/ /
