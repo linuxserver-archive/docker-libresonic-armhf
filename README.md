@@ -13,8 +13,7 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 * [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
 # lsioarmhf/libresonic
-[![](https://images.microbadger.com/badges/version/lsioarmhf/libresonic.svg)](https://microbadger.com/images/lsioarmhf/libresonic "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/lsioarmhf/libresonic.svg)](https://microbadger.com/images/lsioarmhf/libresonic "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/lsioarmhf/libresonic.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsioarmhf/libresonic.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io-armhf/lsioarmhf-libresonic)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io-armhf/job/lsioarmhf-libresonic/)
-
+[![](https://images.microbadger.com/badges/version/lsioarmhf/libresonic.svg)](https://microbadger.com/images/lsioarmhf/libresonic "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/lsioarmhf/libresonic.svg)](https://microbadger.com/images/lsioarmhf/libresonic "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/lsioarmhf/libresonic.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsioarmhf/libresonic.svg)][hub][![Build Status](https://ci.linuxserver.io/buildStatus/icon?job=Docker-Builders/armhf/armhf-libresonic)](https://ci.linuxserver.io/job/Docker-Builders/job/armhf/job/armhf-libresonic/)
 
 [Libresonic][appurl] is a free, web-based media streamer, providing ubiqutious access to your music. Use it to share your music with friends, or to listen to your own music while at work. You can stream to multiple players simultaneously, for instance to one player in your kitchen and another in your living room.
 
@@ -90,6 +89,7 @@ Default user/pass is admin/admin
 
 ## Versions
 
++ **10.07.17:** Rebase to alpine 3.6.
 + **12.05.17:** Add annotation timeout (primarily for armhf and lower powered hosts).
 + **08.02.17:** Rebase to alpine 3.5.
 + **04.12.16:** Rebase to alpine linux, Update jetty runner version.

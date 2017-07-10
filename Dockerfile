@@ -1,5 +1,6 @@
-FROM lsiobase/alpine.armhf:3.5
+FROM lsiobase/alpine.armhf:3.6
 MAINTAINER sparklyballs
+
 # set version label
 ARG BUILD_DATE
 ARG VERSION
@@ -55,4 +56,3 @@ COPY root/ /
 # ports and volumes
 EXPOSE 4040
 VOLUME /config /media /music /playlists /podcasts
-
