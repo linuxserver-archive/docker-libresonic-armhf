@@ -89,6 +89,7 @@ Default user/pass is admin/admin
 
 ## Versions
 
++ **05.01.19:** Linting fixes.
 + **27.08.18:** Rebase to ubuntu bionic.
 + **26.01.18:** Rebase to alpine 3.7.
 + **10.07.17:** Rebase to alpine 3.6.
