@@ -1,0 +1,21 @@
+#!/usr/bin/with-contenv bash
+
+echo '
+******************************************************
+******************************************************
+*                                                    *
+*                                                    *
+*          This image has been deprecated            *
+*                                                    *
+*           Use the multi-arch images at             *
+*                                                    *
+*               linuxserver/libresonic               *
+*                                                    *
+*    https://hub.docker.com/r/linuxserver/libresonic *
+*                                                    *
+*   https://github.com/linuxserver/docker-libresonic *
+*                                                    *
+*                                                    *
+*                                                    *
+******************************************************
+******************************************************'
